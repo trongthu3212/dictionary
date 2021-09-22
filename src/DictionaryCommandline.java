@@ -1,3 +1,5 @@
+import java.io.FileNotFoundException;
+
 public class DictionaryCommandline {
     public static void showAllWords() {
         Word longestTarget = Dictionary.getLongest(true);
@@ -18,7 +20,14 @@ public class DictionaryCommandline {
         DictionaryCommandline.showAllWords();
     }
 
-    public static void main(String[] args) {
-        dictionaryBasic();
+    public static void dictionaryAdvanced() throws FileNotFoundException {
+        DictionaryManagement.insertFromFile();
+        DictionaryCommandline.showAllWords();
+        DictionaryManagement.dictionaryLookup();
+    }
+
+    public static void main(String[] args) throws FileNotFoundException {
+//        dictionaryBasic();
+        dictionaryAdvanced();
     }
 }

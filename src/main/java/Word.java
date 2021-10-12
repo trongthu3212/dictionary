@@ -55,4 +55,9 @@ public class Word {
     public void setPronounce(String pronounce) {
         this.pronounce = pronounce;
     }
+
+    @Override
+    public String toString() {
+        return this.word;
+    }
 }

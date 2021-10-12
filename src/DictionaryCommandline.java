@@ -24,7 +24,6 @@ public class DictionaryCommandline {
         DictionaryManagement.insertFromFile();
         DictionaryCommandline.showAllWords();
         DictionaryManagement.dictionaryLookup();
-        //DictionaryManagement.dictionarySearcher();
     }
 
     public static void main(String[] args) throws FileNotFoundException {

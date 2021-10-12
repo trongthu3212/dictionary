@@ -131,24 +131,4 @@ public class DictionaryManagement {
 
         dictionaryExportToFile();
     }
-    
-    public static void dictionarySearcher() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter the search keyword: ");
-        String searchKeyword = scanner.nextLine().toLowerCase();
-
-        boolean atLeastOnceFound = false;
-
-        for (Word word: Dictionary.wordList) {
-            if (word.getTarget().startsWith(searchKeyword)) {
-                System.out.println(word.getTarget() + " - " + word.getExplain());
-                atLeastOnceFound = true;
-            }
-        }
-
-        if (!atLeastOnceFound) {
-            System.out.println("No word matched the specified keyword given!");
-        }
-    }
 }

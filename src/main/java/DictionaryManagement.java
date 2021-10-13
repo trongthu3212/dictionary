@@ -1,3 +1,6 @@
+import com.sun.speech.freetts.Voice;
+import com.sun.speech.freetts.VoiceManager;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -107,5 +110,13 @@ public class DictionaryManagement {
                 System.err.println(e.getMessage());
             }
         }
+    }
+    //Phát âm
+    public static void mySpeak(String text) {
+        System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
+        VoiceManager vm = VoiceManager.getInstance();
+        Voice voice = vm.getVoice("kevin16");
+        voice.allocate();
+        voice.speak(text);
     }
 }

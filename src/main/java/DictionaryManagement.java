@@ -4,14 +4,15 @@ import java.util.List;
 
 public class DictionaryManagement {
     //Đường dẫn đến file .db
-    static final String path = "jdbc:sqlite:/Users/nguyenvanminhvu/Downloads/dict_hh.db";
+    static final String path = "jdbc:sqlite:dict_hh.db";
 
     //Chèn một từ
     public static void insertWord(Word word) {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(path);
-            PreparedStatement ps = connection.prepareStatement("INSERT INTO av (id,word,html,description,pronounce) VALUES (?,?,?,?,?)");
+            PreparedStatement ps = connection.prepareStatement(
+                    "INSERT INTO av (id,word,html,description,pronounce) VALUES (?,?,?,?,?)");
 
             ps.setString(1, word.getId());
             ps.setString(2, word.getWord());
@@ -86,7 +87,8 @@ public class DictionaryManagement {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(path);
-            PreparedStatement ps = connection.prepareStatement("UPDATE av SET word=?,html=?,description=?,pronounce=? WHERE word=?");
+            PreparedStatement ps = connection.prepareStatement(
+                    "UPDATE av SET word=?,html=?,description=?,pronounce=? WHERE word=?");
 
             ps.setString(1, word);
             ps.setString(2, html);

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="DictionaryWordEditor">
+  <grid id="27dc6" binding="wordEditorMainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="5" left="5" bottom="0" right="5"/>
+    <constraints>
+      <xy x="20" y="20" width="515" height="503"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="c10b8" layout-manager="GridBagLayout">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="97e93" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <text value="Word (English)"/>
+            </properties>
+          </component>
+          <component id="cf757" class="javax.swing.JTextField" binding="wordEditorWordField">
+            <constraints>
+              <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+              <gridbag top="0" left="5" bottom="0" right="0" weightx="4.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="2a19b" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <text value="Meaning (Vietnamese)"/>
+            </properties>
+          </component>
+          <component id="dd042" class="javax.swing.JTextField" binding="wordEditorPronunciationField">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="9" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+              <gridbag top="5" left="5" bottom="0" right="0" weightx="4.0" weighty="1.0"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="ce3d4" class="javax.swing.JLabel" binding="P">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="5" left="0" bottom="0" right="0" weightx="1.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <text value="Prounounciation"/>
+            </properties>
+          </component>
+          <component id="dbb16" class="javax.swing.JEditorPane" binding="wordEditorMeaningPane">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="50"/>
+              </grid>
+              <gridbag top="0" left="5" bottom="10" right="0" weightx="4.0" weighty="8.0"/>
+            </constraints>
+            <properties/>
+          </component>
+        </children>
+      </grid>
+      <grid id="69de5" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="4e55a" class="javax.swing.JButton" binding="wordEditorSubmitButton">
+            <constraints/>
+            <properties>
+              <text value="Submit"/>
+            </properties>
+          </component>
+          <component id="46866" class="javax.swing.JButton" binding="wordEditorCancelButton">
+            <constraints/>
+            <properties>
+              <text value="Cancel"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

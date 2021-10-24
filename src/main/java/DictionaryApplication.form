@@ -7,7 +7,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <grid id="2cff" binding="wordListPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="2cff" binding="wordListPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="10" bottom="0" right="1"/>
         <constraints border-constraint="West"/>
         <properties/>
@@ -54,6 +54,24 @@
               </component>
             </children>
           </scrollpane>
+          <grid id="eaa34" binding="wordManipulationPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="e18d9" class="javax.swing.JButton" binding="wordAddNewButton">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Add"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
         </children>
       </grid>
       <grid id="a023" binding="wordDetailPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -72,10 +90,62 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="4bcf" class="javax.swing.JEditorPane" binding="wordDetailEditorPane">
+              <grid id="1139" layout-manager="GridBagLayout">
                 <constraints/>
                 <properties/>
-              </component>
+                <border type="none"/>
+                <children>
+                  <grid id="ecda3" binding="wordBriefPane" layout-manager="GridBagLayout">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                      <gridbag weightx="1.0" weighty="1.0"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="a1952" class="javax.swing.JLabel" binding="wordNameLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="8.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Text"/>
+                        </properties>
+                      </component>
+                      <component id="181b6" class="javax.swing.JButton" binding="wordSpeakButton">
+                        <constraints>
+                          <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag top="0" left="10" bottom="0" right="0" weightx="1.0" weighty="1.0"/>
+                        </constraints>
+                        <properties>
+                          <icon value="play_button.png"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="412aa" class="javax.swing.JLabel" binding="wordPronounciationLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                          <gridbag weightx="1.0" weighty="0.0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Pronounciation"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <component id="e8c6f" class="javax.swing.JTextPane" binding="wordMeaningPane">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                      <gridbag weightx="1.0" weighty="36.0"/>
+                    </constraints>
+                    <properties>
+                      <editable value="false"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
             </children>
           </scrollpane>
         </children>

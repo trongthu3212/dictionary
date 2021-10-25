@@ -111,6 +111,36 @@ public class DictionaryManagement {
             }
         }
     }
+    
+    public static int getLongestVariableSize(String variable) {
+        Connection connection = null;
+        try {
+            connection = DriverManager.getConnection(path);
+            PreparedStatement ps = connection.prepareStatement(
+                    "SELECT LENGTH(?) FROM av ORDER BY LENGTH(?) DESC LIMIT 1");
+
+            ps.setString(1, variable);
+            ps.setString(2, variable);
+
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+        } finally {
+            try {
+                if (connection != null)
+                    connection.close();
+            } catch (SQLException e) {
+                System.err.println(e.getMessage());
+            }
+        }
+
+        return 0;
+    }
+    
     //Phát âm
     public static void mySpeak(String text) {
         System.setProperty("freetts.voices", "com.sun.speech.freetts.en.us.cmu_us_kal.KevinVoiceDirectory");
